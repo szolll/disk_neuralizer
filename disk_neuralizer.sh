@@ -1,8 +1,36 @@
 #!/bin/bash
 # 
-# Simple script that will destroy all data on the specified disk. Use with caution!
+# Disk Neuralyzer Script
+# 
+# This script securely destroys all data on the specified disk by overwriting it with
+# multiple patterns (ones, random data, and zeroes) to comply with NIST Special Publication 800-88
+# guidelines for data sanitization.
+#
+# Important Notes:
+#
+# - Use this script with caution; all data on the specified disk will be permanently lost.
+# - Ensure that the disk is unmounted before running the script.
+# - This script requires root privileges to execute.
+# - It will install the 'pv' utility if it is not already present on the system.
+#
+# Usage:
+#
+# Run the script as root:
+#   sudo ./disk_neuralyzer.sh
+# Follow the onscreen instructions to select the disk to wipe.
 #
 # Version: 2.3
+#
+# Author: Daniel Sol
+# Date: 2024
+# Git:  https://github.com/szolll/disk_neuralizer/
+# 
+# License:
+#
+# This script is provided "as is" without any warranty. Redistribution or modification 
+# of this script is not permitted without explicit permission from the author.
+# The author is not liable for any damages resulting from the use of this script.
+
 
 # HELP message
 usage() { 
